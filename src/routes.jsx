@@ -6,13 +6,14 @@ import Profile from "./pages/Profile";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
 import Support from "./pages/Support";
-import Navbar from "./components/Navbar"; 
 import SignIn from "./pages/SignIn"; 
+import Menu from "./components/Menu";
+
 
 function AppRoutes() {
   return (
     <Router>
-      <Navbar />
+      <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/companies" element={<Companies />} />
