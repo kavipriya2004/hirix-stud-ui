@@ -1,14 +1,27 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import AppRoutes from "./routes"; // Import Routes
 
-function App() {
+const Layout = () => {
+  const location = useLocation();
+  const hideNavbarRoutes = ["/signin"]; // Hide navbar on sign-in page
+  const showNavbar = !hideNavbarRoutes.includes(location.pathname);
+
   return (
-    <div className="app">
-      <h1>Hirix</h1>
-      <p>App is running!</p>
-    </div>
+    <>
+      {showNavbar && <Navbar />}
+      <AppRoutes />
+    </>
   );
-}
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+};
 
 export default App;

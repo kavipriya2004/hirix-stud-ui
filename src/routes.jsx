@@ -7,6 +7,7 @@ import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
 import Support from "./pages/Support";
 import Navbar from "./components/Navbar"; 
+import SignIn from "./pages/SignIn"; 
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/support" element={<Support />} />
+         <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Router>
   );
