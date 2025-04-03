@@ -1,20 +1,22 @@
 import React from 'react';
-import "../../App.css";
+import './Navbar.css';
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="search-container">
+        <span className="search-icon">🔍</span>
         <input type="text" placeholder="Search for jobs" className="search-input" />
-        <button className="search-icon">
-          <i>🔍</i>
-        </button>
       </div>
       <div className="navbar-right">
-        <button className="settings-button">⚙️</button>
-        <button className="notifications-button">🔔</button>
+        <button className="settings-button">
+          <span className="settings-icon">⚙️</span>
+        </button>
+        <button className="notifications-button">
+          <span className="notifications-icon">🔔</span>
+        </button>
         <div className="user-profile">
-          <div className="avatar"></div>
+          <img src="/api/placeholder/40/40" alt="User profile" className="avatar" />
         </div>
       </div>
     </div>
