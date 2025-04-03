@@ -19,8 +19,9 @@
     border-radius: 20px;
     padding: 6px 15px;
     width: 280px;
-  }
-  
+    margin-left: auto;  /* Pushes the search bar to the right */
+}
+
   .search-icon {
     margin-right: 8px;
     color: #888;

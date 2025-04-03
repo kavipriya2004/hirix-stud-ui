@@ -15,6 +15,10 @@ const Menu = () => {
 
   return (
     <nav className="menu">
+      {/* HIRIX Logo */}
+      <div className="menu-logo">Hirix</div>
+
+      {/* Menu List */}
       <ul className="menu-list">
         {menuItems.map((item, index) => (
           <li key={index} className="menu-item">
