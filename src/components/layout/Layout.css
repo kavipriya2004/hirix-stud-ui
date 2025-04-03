@@ -1,0 +1,36 @@
+/* Ensure full-screen layout */
+.layout-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh; /* Full screen height */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  height: 100vh;
+  background-color: #f4f4f4; /* Change as needed */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar should be fixed at the top */
+.main-content > nav {
+  height: 60px; /* Adjust as needed */
+  background-color: #fff; /* Change as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Page content fills remaining space */
+.page-content {
+  flex: 1;
+  overflow: auto; /* Allows scrolling if content exceeds screen */
+  padding: 20px;
+  background-color: #ffffff; /* Change as needed */
+}
