@@ -8,179 +8,34 @@
 
 body {
   background-color: #f6f6f6;
-}
-
-/* Main container layout */
-.app-container {
-  display: flex;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  width: 100%;
 }
 
-/* Sidebar styling */
-.sidebar {
-  width: 240px;
-  min-width: 200px;
-  background-color: white;
-  padding: 20px 0;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  overflow-y: auto;
+/* Global button styles */
+button {
+  cursor: pointer;
 }
 
-.logo-container {
-  padding: 0 20px 20px;
-}
-
-.logo {
-  color: #ff3b5c;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-/* Main content area */
-.main-content {
-  flex: 1;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  min-width: 0; /* Prevents content from overflowing */
-  overflow-x: hidden;
-}
-
-/* Navbar styling */
-.navbar {
-  height: 70px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #f1f1f1;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  padding: 8px 15px;
-  width: 300px;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    width: 200px;
-  }
-}
-
-.search-input {
-  border: none;
-  background-color: transparent;
-  flex: 1;
+/* Global focus styles */
+:focus {
   outline: none;
-  font-size: 14px;
 }
 
-.search-icon {
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Global link styles */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.settings-button, .notifications-button {
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.user-profile {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: #FFD700;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.avatar {
-  width: 100%;
-  height: 100%;
-}
-
-/* Page content area */
-.page-content {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-/* Menu styling */
-.menu {
-  flex: 1;
-}
-
-.menu-list {
-  list-style: none;
+/* Global headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   padding: 0;
 }
 
-.menu-item {
-  margin-bottom: 5px;
-}
-
-.menu-item a {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: #555;
-  transition: all 0.3s ease;
-  border-radius: 0 20px 20px 0;
-  margin-right: 15px;
-}
-
-.menu-item a:hover {
-  background-color: rgba(255, 59, 92, 0.1);
-  color: #ff3b5c;
-}
-
-.active-link {
-  background-color: rgba(255, 59, 92, 0.2) !important;
-  color: #ff3b5c !important;
-  font-weight: 500;
-}
-
-.menu-icon {
-  margin-right: 12px;
-  font-size: 18px;
-  width: 20px;
-  text-align: center;
-}
-
-.menu-text {
-  font-size: 14px;
-}
-
-/* Page Header Styles */
+/* Page Header Styles - these are used across different pages */
 .page-header {
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -199,21 +54,68 @@ body {
   margin-top: 5px;
 }
 
-/* Responsive styles */
+/* Global card styles */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Global form styles */
+input, textarea, select {
+  font-size: 14px;
+}
+
+/* Global utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Global responsive styles */
 @media (max-width: 768px) {
-  .app-container {
-    flex-direction: column;
-  }
-  
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 10px 0;
-  }
-  
-  .menu-item a {
-    border-radius: 20px;
-    margin: 0 10px;
+  .hide-mobile {
+    display: none;
   }
 }
